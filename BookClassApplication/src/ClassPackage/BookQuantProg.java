@@ -1,7 +1,7 @@
 package ClassPackage;
 import java.util.Scanner;
 
-import ClassPackage.BookClass;
+import ClassPackage.BookDB;
 
 public class BookQuantProg {
 	public static void main(String[] args) {
@@ -29,11 +29,12 @@ public class BookQuantProg {
 
 		System.out.print("Book in stock? ");
 		tempIsInStock = keyboard.nextBoolean();
+		
+		
 
-		BookClass book = new BookClass(tempTitle, tempAuthor, tempDesc,
-				tempPrice, tempIsInStock);
+		BookClass book = BookDB.getCreatedBook(tempTitle, tempAuthor, tempDesc, tempPrice, tempIsInStock );
 
-		System.out.println("\n\n\n");
+		System.out.println();
 
 		System.out.print("How many books are required? ");
 		tempNumOfBooks = keyboard.nextInt();

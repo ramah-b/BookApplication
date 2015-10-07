@@ -9,6 +9,15 @@ public class BookClass {
 	private String bookDesc;
 	private double bookPrice;
 	private boolean bookIsInStock;
+	
+	public BookClass() {
+		bookTitle = "";
+		bookAuthor = "";
+		bookDesc = "";
+		bookPrice = 0;
+		bookIsInStock = false;
+	}
+
 
 	public BookClass(String title, String author, String desc, double price,
 			boolean isInStock) {
